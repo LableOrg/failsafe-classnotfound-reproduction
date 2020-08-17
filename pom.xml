@@ -54,15 +54,28 @@
 
   <profiles>
     <profile>
-      <id>failsafe-old</id>
+      <id>failsafe-old2</id>
       <activation>
         <property>
-          <name>old</name>
+          <name>old2</name>
         </property>
       </activation>
       <properties>
         <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
         <maven.failsafe.plugin.version>2.22.2</maven.failsafe.plugin.version>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>failsafe-old3</id>
+      <activation>
+        <property>
+          <name>old3</name>
+        </property>
+      </activation>
+      <properties>
+        <maven.surefire.plugin.version>3.0.0-M4</maven.surefire.plugin.version>
+        <maven.failsafe.plugin.version>3.0.0-M4</maven.failsafe.plugin.version>
       </properties>
     </profile>
   </profiles>
