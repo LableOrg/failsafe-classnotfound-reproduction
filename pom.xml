@@ -78,5 +78,24 @@
         <maven.failsafe.plugin.version>3.0.0-M4</maven.failsafe.plugin.version>
       </properties>
     </profile>
+
+    <profile>
+      <id>failsafe-workaround</id>
+      <activation>
+        <property>
+          <name>workaround</name>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <configuration>
+              <useModulePath>false</useModulePath>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
   </profiles>
 </project>
